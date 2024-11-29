@@ -2,9 +2,9 @@
 
 A simple portfolio template for developer/designers built with React. 
 
-### [live preview](---)
+### [live preview](https://github.com/psalmistcom/react-portfolio.git)
 
-[![react portfoiio](src/assets/images/react%20portfolio%20gif.gif)](---)
+[![react portfoiio](src/assets/images/react%20portfolio%20gif.gif)](https://github.com/psalmistcom/react-portfolio.git)
 
 ### Features
 
@@ -18,7 +18,7 @@ A simple portfolio template for developer/designers built with React.
 
 Get the code
 
-<pre>git clone ---</pre>
+<pre>git clone https://github.com/psalmistcom/react-portfolio.git</pre>
  
 Install required dependencies
 
