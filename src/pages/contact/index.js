@@ -5,18 +5,9 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta, socialprofils } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
-import {
-  FaGithub,
-  FaTwitter,
-  FaFacebookF,
-  FaLinkedin,
-  FaYoutube,
-  FaTwitch,
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTiktok,
-  FaCircle,
-} from "react-icons/fa";
+import { FaGithub, FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
+require("dotenv").config();
+
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
     email: "",
@@ -41,11 +32,17 @@ export const ContactUs = () => {
 
     emailjs
       .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
+        process.env.REACT_APP_YOUR_SERVICE_ID,
+        process.env.REACT_APP_YOUR_TEMPLATE_ID,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        process.env.REACT_APP_YOUR_USER_ID
       )
+      // .send(
+      //   contactConfig.process.env YOUR_SERVICE_ID,
+      //   contactConfig.YOUR_TEMPLATE_ID,
+      //   templateParams,
+      //   contactConfig.YOUR_USER_ID
+      // )
       .then(
         (result) => {
           console.log(result.text);
