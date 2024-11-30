@@ -6,7 +6,6 @@ import { meta, socialprofils } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 import { FaGithub, FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
-import env from "react-dotenv";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -32,14 +31,14 @@ export const ContactUs = () => {
 
     emailjs
       .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-        // env.REACT_APP_YOUR_SERVICE_ID,
-        // env.REACT_APP_YOUR_TEMPLATE_ID,
+        // contactConfig.YOUR_SERVICE_ID,
+        // contactConfig.YOUR_TEMPLATE_ID,
         // templateParams,
-        // env.REACT_APP_YOUR_USER_ID
+        // contactConfig.YOUR_USER_ID
+        env.REACT_APP_YOUR_SERVICE_ID,
+        env.REACT_APP_YOUR_TEMPLATE_ID,
+        templateParams,
+        env.REACT_APP_YOUR_USER_ID
       )
       
       .then(
