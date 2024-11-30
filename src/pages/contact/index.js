@@ -6,7 +6,7 @@ import { meta, socialprofils } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 import { FaGithub, FaTwitter, FaFacebookF, FaLinkedin } from "react-icons/fa";
-require("dotenv").config();
+import env from "react-dotenv";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -32,17 +32,16 @@ export const ContactUs = () => {
 
     emailjs
       .send(
-        process.env.REACT_APP_YOUR_SERVICE_ID,
-        process.env.REACT_APP_YOUR_TEMPLATE_ID,
+        contactConfig.YOUR_SERVICE_ID,
+        contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_YOUR_USER_ID
+        contactConfig.YOUR_USER_ID
+        // env.REACT_APP_YOUR_SERVICE_ID,
+        // env.REACT_APP_YOUR_TEMPLATE_ID,
+        // templateParams,
+        // env.REACT_APP_YOUR_USER_ID
       )
-      // .send(
-      //   contactConfig.process.env YOUR_SERVICE_ID,
-      //   contactConfig.YOUR_TEMPLATE_ID,
-      //   templateParams,
-      //   contactConfig.YOUR_USER_ID
-      // )
+      
       .then(
         (result) => {
           console.log(result.text);
@@ -167,7 +166,7 @@ export const ContactUs = () => {
                 name="message"
                 placeholder="Message"
                 rows="5"
-                value={formData.message}
+                value={formData.message || ""}
                 onChange={handleChange}
                 required
               ></textarea>
