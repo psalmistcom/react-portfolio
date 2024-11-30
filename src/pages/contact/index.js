@@ -2,10 +2,21 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
+import { meta, socialprofils } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
-
+import {
+  FaGithub,
+  FaTwitter,
+  FaFacebookF,
+  FaLinkedin,
+  FaYoutube,
+  FaTwitch,
+  FaInstagram,
+  FaSnapchatGhost,
+  FaTiktok,
+  FaCircle,
+} from "react-icons/fa";
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
     email: "",
@@ -110,6 +121,20 @@ export const ContactUs = () => {
               )}
             </address>
             <p>{contactConfig.description}</p>
+            <div className="d-flex justify-content-evenly">
+              <a target="_blank" className="pr-2" href={socialprofils.linkedin}>
+                <FaLinkedin />
+              </a>
+              <a target="_blank" className="mr-2" href={socialprofils.github}>
+                <FaGithub />
+              </a>
+              <a target="_blank" className="mr-2" href={socialprofils.facebook}>
+                <FaFacebookF />
+              </a>
+              <a target="_blank" className="mr-2" href={socialprofils.twitter}>
+                <FaTwitter />
+              </a>
+            </div>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">

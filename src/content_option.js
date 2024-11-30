@@ -11,7 +11,7 @@ const introdata = {
         second: "I code cool websites",
         third: "I develop web apps",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    description: "Experienced Software Engineer with a demonstrated history of working in the commercial real estate industry, educational sectors and other potential organizations.",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
 };
 
@@ -136,9 +136,9 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
+    YOUR_EMAIL: "dadewale9@gmail.com",
+    YOUR_FONE: "+234 810 508 1738",
+    description: introdata.description,
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_id",
@@ -147,10 +147,10 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/psalmistcom",
+    facebook: "https://web.facebook.com/PsalmistforDavid",
+    linkedin: "https://www.linkedin.com/in/adewale-david-csm/",
+    twitter: "https://twitter.com/psalmistcom",
 };
 export {
     meta,
