@@ -23,9 +23,9 @@ console.log(process.env.REACT_APP_YOUR_USER_ID)
     setFormdata({ loading: true });
 
     const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
+      from_email: formData.email,
+      from_name: formData.name,
+      to_email: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
 
