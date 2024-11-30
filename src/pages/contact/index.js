@@ -17,7 +17,7 @@ export const ContactUs = () => {
     alertmessage: "",
     variant: "",
   });
-
+console.log(process.env.REACT_APP_YOUR_USER_ID)
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
@@ -35,10 +35,10 @@ export const ContactUs = () => {
         // contactConfig.YOUR_TEMPLATE_ID,
         // templateParams,
         // contactConfig.YOUR_USER_ID
-        env.REACT_APP_YOUR_SERVICE_ID,
-        env.REACT_APP_YOUR_TEMPLATE_ID,
+        process.env.REACT_APP_YOUR_SERVICE_ID,
+        process.env.REACT_APP_YOUR_TEMPLATE_ID,
         templateParams,
-        env.REACT_APP_YOUR_USER_ID
+        process.env.REACT_APP_YOUR_USER_ID
       )
       
       .then(
